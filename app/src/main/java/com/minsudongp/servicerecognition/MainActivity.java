@@ -1,16 +1,10 @@
 package com.minsudongp.servicerecognition;
 
 import android.content.Intent;
-import android.speech.RecognitionListener;
-import android.speech.RecognitionService;
-import android.speech.RecognizerIntent;
-import android.speech.SpeechRecognizer;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.util.Log;
-import android.widget.TextView;
 
-import java.util.ArrayList;
+import androidx.appcompat.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,8 +13,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        startService(new Intent(this,Recoginition.class));
+        findViewById(R.id.main_btn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startService(new Intent(MainActivity.this,Recognition.class));
+            }
+        });
     }
-
-
 }

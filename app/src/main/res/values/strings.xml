@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ServiceRecognition</string>
+    <string name="main_btn">음성인식 시작</string>
 </resources>
