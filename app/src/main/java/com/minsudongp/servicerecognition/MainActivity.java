@@ -19,5 +19,12 @@ public class MainActivity extends AppCompatActivity {
                 startService(new Intent(MainActivity.this,Recognition.class));
             }
         });
+
+        findViewById(R.id.main_delete_btn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                stopService(new Intent(MainActivity.this,Recognition.class));
+            }
+        });
     }
 }
